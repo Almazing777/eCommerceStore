@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Test Suite: for WoahStork Website">
+
+    <test name="Smoke Test One: sign up success" preserve-order="false">
+        <classes>
+            <class name="SignUp">
+                <methods>
+                    <include name="signUpSuccess" />
+                    <exclude name="signUpWrongEmail" />
+                    <exclude name="signUpEmptyCredentials" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Smoke Test Two: incorrect email and password" preserve-order="false">
+        <classes>
+            <class name="SignUp">
+                <methods>
+                    <exclude name="signUpSuccess" />
+                    <include name="signUpWrongEmail" />
+                    <include name="signUpEmptyCredentials" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
