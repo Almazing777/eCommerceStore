@@ -18,8 +18,8 @@ import java.util.concurrent.TimeUnit;
             wait = new WebDriverWait(driver, 4);
         }
 
-        @AfterMethod
-        public void tearDown(){
-            driver.quit();
-        }
+//        @AfterMethod
+//        public void tearDown(){
+//            driver.quit();
+//        }
     }

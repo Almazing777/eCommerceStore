@@ -17,6 +17,13 @@
                     <include name="verifyCountOfElements" />
                 </methods>
             </class>
+            <class name="AdvancedTechniques">
+                <methods>
+                    <include name="mouseHover" />
+                    <include name="scrollDownAndType" />
+                    <include name="getTitleNames" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
