@@ -12,7 +12,7 @@
                     <include name="signUpEmptyCredentials" />
                 </methods>
             </class>
-            <class name="TripListedPage">
+            <class name="ProductListedPage">
                 <methods>
                     <include name="verifyCountOfElements" />
                 </methods>
