@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
             driver = new ChromeDriver();
             driver.get("https://test.woahstork.com/");
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             wait = new WebDriverWait(driver, 4);
         }
 

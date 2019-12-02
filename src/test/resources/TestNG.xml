@@ -12,6 +12,11 @@
                     <include name="signUpEmptyCredentials" />
                 </methods>
             </class>
+            <class name="ProductListedPage">
+                <methods>
+                    <include name="verifyCountOfElements" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
