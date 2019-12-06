@@ -4,6 +4,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import java.util.Iterator;
@@ -14,11 +16,7 @@ public class AdvancedTechniques extends BaseTest{
 
     @Test
     public void mouseHover(){
-
-        driver.get("https://learn.woahstork.com/");
         Actions builder = new Actions(driver);
-
-        //MOUSE HOVER OVER AND SELECT
         WebElement disordersTab = driver.findElement(By.xpath("//li[@id='menu-item-2616']//a[contains(text(),'Disorders')]"));
         builder
                 .moveToElement(disordersTab)
@@ -35,7 +33,7 @@ public class AdvancedTechniques extends BaseTest{
 
     @Test
     public void scrollDownAndType(){
-        driver.get("https://learn.woahstork.com/");
+        
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1200)");
 
@@ -49,6 +47,18 @@ public class AdvancedTechniques extends BaseTest{
                 .keyUp(Keys.SHIFT)
                 .build()
                 .perform();
+    }
+
+    @Test
+    public void multipleWindow(){
+        String mainWindow = driver.getWindowHandle();
+        
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Cannabis Science']"))).click();
+
+        driver.switchTo().window(mainWindow);
     }
 
 }

@@ -21,7 +21,7 @@
                 <methods>
                     <include name="mouseHover" />
                     <include name="scrollDownAndType" />
-                    <include name="getTitleNames" />
+                    <include name="multipleWindow" />
                 </methods>
             </class>
         </classes>
