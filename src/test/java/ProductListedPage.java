@@ -10,7 +10,7 @@ import java.util.List;
 public class ProductListedPage extends BaseTest{
 
     @Test
-    public static void verifyCountOfElements() throws InterruptedException {
+    public static void verifyCountOfElements() {
 
         driver.get("https://test.woahstork.com/shop?address=90020&showAll=true");
 
